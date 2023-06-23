@@ -3,7 +3,7 @@
         <v-sheet max-width="300" max-height="300" class="mx-auto">
    
 
-            <center><h2>รายการเช็คสภาพรถ</h2></center>
+            <center><h2>รายการเช็คสภาพรถORN</h2></center>
             <v-container > 
                 <v-row no-gutters>
                     <v-col>
