@@ -3,7 +3,7 @@
         <v-sheet max-width="300" max-height="300" class="mx-auto">
    
 
-            <center><h2>รายการเช็คสภาพรถORN</h2></center>
+            <center><h2>รายการเช็คสภาพรถ</h2></center>
             <v-container > 
                 <v-row no-gutters>
                     <v-col>
@@ -58,7 +58,7 @@
                         </v-sheet>
                     </v-col>
                 </v-row>
-
+                <!-- ตารางเก่า(โชว์บรรทัดละ1 สำหรับมือถือ) -->
                 <!-- <v-col >
                             <v-sheet class="pa-2 ma-3">
                                     <v-checkbox label="น้ำมันเครื่อง"> </v-checkbox> 
