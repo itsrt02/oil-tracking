@@ -129,12 +129,17 @@
 
     import { ref,reactive } from 'vue'
     import axios from 'axios'
-    let cardata = ['โฟล์คลิฟท์ SRT', 'บพ-550', '81-0402 สฎ', '81-0404 สฎ', '81-5096 สฎ','บพ-548 สฎ', 'บม-1389 สฎ']
+        
+    import { useEmployeeStore } from '@/store/employee'
+    const  useEmployee = useEmployeeStore()     
+
+
+    let cardata = useEmployee.car_list
 
 
 
     let user_check  = ref(0)
-    let car_id  = ref(cardata[1])
+    let car_id  = useEmployee.default_car
     let car_id_mapping  = ref(0)
     let oil_check  = ref(0)
     let break_check  = ref(0)
