@@ -1,5 +1,9 @@
 <template>
     <div class="pa-md-8">
+            <h1>{{  useEmployee.get_employee_name }}</h1>      
+      <h3>{{  useEmployee.car_list  }}</h3>
+      <h3> default => {{ useEmployee.default_car }}</h3>
+      
       <h1>Home</h1>
       <h1>ภาษาไทย</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde culpa fugit, ullam consequuntur quidem totam iste, eaque nostrum maiores harum labore inventore impedit dolor ex nemo quibusdam illo architecto ipsum.</p>
@@ -41,84 +45,10 @@
   
 
  <script setup lang="ts">
+    import { useEmployeeStore } from '@/store/employee'
+    const  useEmployee = useEmployeeStore()
 
-import { onMounted , ref} from 'vue'
-
-    let interval = ref<{}>({})
-    let value = ref(0)
-
-    let desserts = ref([
-          {
-            name: 'Frozen Yogurt',
-            calories: 159,
-          },
-          {
-            name: 'Ice cream sandwich',
-            calories: 237,
-          },
-          {
-            name: 'Eclair',
-            calories: 262,
-          },
-          
-        ])
-
-    // clearInterval(interval)
-
-    // onMounted :{
-
-    //   interval = setInterval(() => {
-    //     if (value.value === 100) {
-    //       return (value.value = 0)
-    //     }
-
-    //     if ( value.value == 0 ){
-
-    //       desserts.value = []
-
-    //     }
-
-    //     value.value += 10
-
-    //     if ( value.value == 50 ){
-
-    //       desserts.value = [
-    //       {
-    //         name: 'Cupcake',
-    //         calories: 305,
-    //       },
-    //       {
-    //         name: 'Gingerbread',
-    //         calories: 356,
-    //       },
-    //       {
-    //         name: 'Jelly bean',
-    //         calories: 375,
-    //       },
-    //       {
-    //         name: 'Lollipop',
-    //         calories: 392,
-    //       },
-    //       {
-    //         name: 'Honeycomb',
-    //         calories: 408,
-    //       },
-    //       {
-    //         name: 'Donut',
-    //         calories: 452,
-    //       },
-    //       {
-    //         name: 'KitKat',
-    //         calories: 518,
-    //       },
-    //     ]
-
-    //     }
-
-    //   }, 1000)
-
-    // }
-
+   
 
  </script>
   

@@ -76,10 +76,15 @@
     
     import { ref,reactive } from 'vue'
     import axios from 'axios'
-    let test11 = ['โฟล์คลิฟท์ SRT', 'บพ-550', '81-0402 สฎ', '81-0404 สฎ', '81-5096 สฎ','บพ-548 สฎ', 'บม-1389 สฎ']
+    import { useEmployeeStore } from '@/store/employee'
+
+    const  useEmployee = useEmployeeStore()
+
+
+    let test11 = useEmployee.car_list
 
     let jsondata : any = reactive<object>({
-        Car_id: '',
+        car_id: useEmployee.default_car,
         Mileage :  0 ,
         Oil_Total : 0.00,
         Oil_Price : 0.00,
@@ -89,7 +94,7 @@
     let Mileage = ref(0)
     let Oil_Total = ref(0)
     let Oil_Price = ref(0)
-    let car_id  = ref(test11[13])
+    let car_id  = ref(test11)
     let UpLoad_OilBill =ref(0)
 
      let rules = {

@@ -96,6 +96,13 @@
                 prepend-icon="mdi-car"
                 :items="cardata"
             ></v-autocomplete>
+
+            <v-text-field
+                v-model="note"
+                label="หมายเหตุ"
+                prepend-icon="mdi-alert-circle"
+            ></v-text-field>
+
             <v-file-input
                     :rules="rules"
                     accept="image/png, image/jpeg, image/bmp"
@@ -137,7 +144,7 @@
     let belt_check  = ref(0)
     let tire_check  = ref(0)
     let light_check  = ref(0)
-    let note  = ref(0)
+    let note  = ref()
     let upload_img  = ref(0)
     let rec_time_stamp  = ref(0)
 
