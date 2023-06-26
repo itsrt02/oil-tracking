@@ -1,8 +1,9 @@
 <template>
+    
     <v-container grid-list-xs>        
         <v-sheet max-width="300" max-height="300" class="mx-auto">
    
-
+            
             <center><h2>รายการเช็คสภาพรถ</h2></center>
             <v-container > 
                 <v-row no-gutters>
